@@ -10,7 +10,7 @@
 /* root dùng để chọn phần tử gốc trong trang web */
 :root{ 
     --bg-color:#111111;
-    --second-bg-color:#151515;
+    --second-bg-color:#323946;
     --text-color: #fff;
     --main-color:#04fffb;
 }
@@ -27,6 +27,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    height: 60px;
     padding: 1.5rem 8%;
     background: rgba(0,0,0,0.6);
     backdrop-filter: blur(10px); /*làm mờ */
@@ -84,7 +85,7 @@ section{
     flex-direction: column;
     text-align: center;
     margin-top: 2rem;
-    padding-top: 100px;
+    padding-top: 180px;
 }
 span{
     color: var(--main-color);
@@ -103,9 +104,9 @@ span{
 .orbit-circle {
     border-radius: 50%;
     position: relative;
-    top: 10rem;
-    height: 500px;
-    width: 500px;
+    top: 11rem;
+    height: 400px;
+    width: 400px;
     box-shadow: 0 0 25px var(--main-color);
     display: inline-block;
     border: 5px solid white;
@@ -113,11 +114,13 @@ span{
     box-sizing: border-box;
     animation: orbit 10s infinite linear;
     animation-delay: 0.25s;
+    transition: 0.4s ease-in-out;
+    
 }
 .orbit-object{
     background-color: #fff;
     position: absolute;
-    top: 90px;left: 0;
+    top: -30px;left: 0;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -172,12 +175,11 @@ span{
 }
 .home-img{
     position: absolute;
-    padding-top: 200px;
+    padding-top: 230px;
 }
 .home-img img{
     border-radius: 50%;
     position: relative;
-    max-height: 500px;
     top: 0rem;
     height: 500px;
     width: 500px;
@@ -190,10 +192,9 @@ span{
 }
 
 .home-content p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
     max-width: 1000px;
-    
 }
 
 .social-icons a{
@@ -228,6 +229,10 @@ span{
     font-weight: 600;
     transition:  0.3rem ease-in-out;
     cursor:pointer;
+    box-shadow: 0 0 25px var(--main-color);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 .btn:hover{
@@ -267,19 +272,19 @@ span{
 @keyframes words {
     0%,
     20%{
-        content: "Web developer";
+        content: "Web Developer";
     }
     21%,
     40%{
-        content: "Graphic Designer";
+        content: "Frontend Developer";
     }
     41%,
     60%{
-        content: "UI / UX Designer";
+        content: "Backend Developer";
     }
     61%,
     80%{
-        content: "Content manager";
+        content: "Fullstack";
     }
     81%,
     100%{
@@ -364,4 +369,282 @@ span{
         width: 56vw;
         margin-top: -11rem;
     }
+}
+
+ /* about design */
+  
+ .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10rem;
+    max-height: 100%;
+ }
+ 
+ .about-img img{
+    border-radius: 50%;
+    position: relative;
+    top: 5rem;
+    height: 450px;
+    width: 450px;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.about-img img:hover{
+    box-shadow: 0 0 50px var(--main-color) , 0 0 100px var(--main-color);
+ }
+ .about-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+.about-content h2{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    text-shadow: 0 0 0.4rem #fff;
+    line-height: 1;
+}
+.about-content p{
+    font-size: 2rem;
+    font-weight: 500;
+    max-width: 1000px;
+    padding-bottom: 15px;
+}
+
+/* services design */
+
+.services h2{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    padding-top: 40px;
+    text-shadow: 0 0 0.4rem #fff;
+}
+.services-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    
+}
+.services-container .services-box{
+    flex: 1 1 35rem;
+    background: var(--second-bg-color);
+    text-align: center;
+    border-radius: 2rem;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease-in-out;
+}
+.services-container .services-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.15);
+}
+.services-box i{
+    font-size: 7rem;
+    padding-top: 35px;
+    color: var(--main-color);
+    
+}
+.services-box h3{
+    font-size: 3rem;
+    margin: 15px;
+    font-weight: 800;
+}
+.services-box p{
+    font-size: 2rem;
+    margin: 1rem 4rem 3rem;
+    line-height: 34px;
+    font-weight: 100;
+}
+.services-box .btn{
+    width: 20rem;
+    align-items: center;
+    margin: 40px;
+}
+
+/* project design */
+
+.project h2{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    margin: 75px;
+    padding-top: 30px;
+    text-shadow: 0 0 0.4rem #fff;
+}
+.project p{
+    font-size: 2rem;
+    margin: 1rem 4rem 3rem;
+    line-height: 34px;
+    font-weight: 100;
+    text-shadow: black 0.2rem 0.2rem 0.2rem;
+}
+.project {
+    background: var(--bg-color);
+}
+.project-container{
+    display: grid;/* grid chia bố cục container 3 cột , 100%/3 hàng*/
+    grid-template-columns:  repeat(3, 1fr); /* 3 column width: calc(100%/3) : dùng cách này có thể thêm nhiền phân tử con*/
+    align-items: center;
+    gap: 7.5rem;
+    
+    
+}
+.project-container .project-box{
+    position: relative;
+    border-radius:  2rem;
+    box-shadow: 0 0 1rem var(--bg-color); 
+    overflow: hidden;
+    display: flex;   
+}
+.project-box img{
+    width: 100%;
+    transition: .5s ease;
+}
+.project-box:hover img{
+    transform: scale(1.13);/* xác định  một biến đổi tỉ lệ 2D*/
+}
+.project-box .project-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%); /*xác định một dịch chuyển 2D theo trục Y*/
+    transition: .5s ease;
+}
+.project-box:hover .project-layer{
+    transform: translateY(0);
+}
+.project-layer h4{
+    font-size: 3rem;
+    text-shadow: black 0.2rem 0.2rem 0.2rem;
+}
+.project-layer a{
+    display: inline-flex; /*giúp thành phần linh hoạt dưới dạng các inline*/
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.project-layer a i{
+    font-size: 2.5rem;
+    color: var(--second-bg-color);
+}
+
+/* contact design */
+
+.contact {
+    background: var(--bg-color);
+}
+.contact h2{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    margin: 65px;
+    padding-top: 30px;
+    text-shadow: 0 0 0.4rem #fff;
+}
+.contact form{
+    max-width: 100rem;
+    margin: 1rem auto;
+    align-items: center;
+    margin-bottom: 8rem;
+    
+}
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: 8rem;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+    height: 35rem;
+}
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+/* footer design  */
+
+.footer{
+    flex-wrap: wrap;
+    background: var(--second-bg-color);
+    height: 5rem;
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .footer-icon{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    float: right;
+    width: 100%;
+    padding-right: 2rem;
+}
+.footer-icon a{
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--main-color);
+    border-radius: .8rem;
+}
+.footer-icon a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.footer-icon a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
 }
